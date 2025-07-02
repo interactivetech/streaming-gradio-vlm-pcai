@@ -104,14 +104,7 @@ The Helm chart contains all the Kubernetes manifests needed to run the applicati
     *   **Step 3: Review & Deploy**
         *   The UI will display the contents of the `values.yaml` file.
         *   **IMPORTANT:** You must configure the ingress endpoint. Locate the `ezua.virtualService.endpoint` key and update its value to match your PCAI environment's domain. For example:
-        *   ```yaml
-          # Change this:
-          endpoint: "gradio-vlm.${DOMAIN_NAME}"
-          ```
-          ```yaml
-          # To something like this:
-          endpoint: "gradio-vlm.my-namespace.ingress.pcai-cluster.mycompany.com"
-          ```
+          `endpoint: "gradio-vlm.${DOMAIN_NAME}"` To something like this:  `endpoint: "gradio-vlm.my-namespace.ingress.pcai-cluster.mycompany.com"`
         *   Review other values if needed (e.g., `replicaCount`, `resources`).
         *   Click **Deploy**.
 
